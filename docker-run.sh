@@ -1,7 +1,7 @@
 #!/bin/bash
 set +e
-docker rm systemcapture
+docker rm sc
 set -e
-GOOS=linux go build SystemCapture.go
-docker build -t systemcapture .
-docker run -p 8080:8080 --name systemcapture -i -t systemcapture
+GOOS=linux go build sc.go
+docker build -t sc .
+docker run -p 8080:8080 --name sc -i -t sc
